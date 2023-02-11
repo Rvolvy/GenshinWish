@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wish Calc by-ilo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js"></script>
+</head>
+<body class="flex justify-center items-center w-[100%] h-[100vh] bg-gradient-to-b from-[#1a2345] to-[#6f00ff]">
+  <form class="flex flex-col justify-center items-center gap-[30px] px-[30px] py-[50px] bg-[#00000050] rounded-[30px]">
+    <p class="text-white text-[25px] font-mono">Wish Calc</p>
+    <input class="px-[10px] py-[3px] text-[20px] font-mono outline-none rounded-[5px] w-[300px]" type="number" id="primo" placeholder="Primogems Amount">
+    <input class="px-[10px] py-[3px] text-[20px] font-mono outline-none rounded-[5px] w-[300px]" type="number" id="pity" placeholder="Pity Amount">
+    <input class="px-[10px] py-[3px] text-[20px] font-mono outline-none rounded-[5px] w-[300px]" type="number" id="IF" placeholder="IF Amount">
+    <select class="px-[10px] py-[3px] text-[20px] font-mono outline-none rounded-[5px] w-[300px]" id="rate">
+      <option value="On">Rate On</option>
+      <option value="Off">Rate Off</option>
+    </select>
+    <button onclick="Click()" class="bg-[#6f00ff] text-white text-[20px] font-mono w-[100%] py-[10px] rounded-[5px] duration-[0.5s] hover:bg-[#808080]">Count!</button>
+  </form>
+</body>
+</html>

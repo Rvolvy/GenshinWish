@@ -21,16 +21,24 @@ function Click() {
   }
   
   else if (rate.value == 'On') {
-    let konfir = confirm(`You have ${primo} Primo, Pity: ${pity}, IF: ${IF}, and Rate: On?`)
-    if (konfir == true){
-      alert(`You need ${On - primo - pityPrimo - IFPrimo} Primogems to 100% get limited character`)
+    if (confirm(`You have ${primo} Primo, Pity: ${pity}, IF: ${IF}, and Rate: On?`)){
+      if (On - primo - pityPrimo - IFPrimo <= 0) {
+        alert(`You get 100% limited characters with remaining primogems: ${Math.abs(On - primo - pityPrimo - IFPrimo)}`)
+      }
+      else{
+        alert(`You need ${On - primo - pityPrimo - IFPrimo} Primogems to 100% get limited character`)
+      }
     }
   }
 
   else if (rate.value == 'Off') {
-    let konfir = confirm(`You have ${primo} Primo, Pity: ${pity}, IF: ${IF}, and Rate: Off?`)
-    if (konfir == true){
-      alert(`You need ${Off - primo - pityPrimo - IFPrimo} Primogems to 100% get limited character`)
+    if (confirm(`You have ${primo} Primo, Pity: ${pity}, IF: ${IF}, and Rate: Off?`)){
+      if (Off - primo - pityPrimo - IFPrimo <= 0) {
+        alert(`You get 100% limited characters with remaining primogems: ${Math.abs(Off - primo - pityPrimo - IFPrimo)}`)
+      }
+      else{
+        alert(`You need ${Off - primo - pityPrimo - IFPrimo} Primogems to 100% get limited character`)
+      }
     }
   }
 }
